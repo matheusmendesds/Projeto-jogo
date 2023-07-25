@@ -8,7 +8,7 @@
     
 </head>
 <body class="container d-block border bg-light">
-    <div id="Persona">
+    <div id="Persona" >
         <h3>Crie seu personagem!</h3>
         <p>Nome:<input type="text" name="nome" id="nome" maxlength="20" required ></p>
         <p>Força:<input type="number" min="1" max="100" maxlength="20" id="forPer"></p>
@@ -18,7 +18,7 @@
     <div id="Arena">
         <p>Monstros já estão te aguardando...</p>
     </div>
-    <p><button type="submit" onclick="jogar()">Jogar</button> <button type="reset" onclick="limpar()">Tentar novamente</button></p>
+    <p><button type="submit" onclick="jogar()" id="jogar">Jogar</button> <button type="reset" onclick="limpar()" id="tntn">Tentar novamente</button></p>
     <button type="submit" id="segfase" style="display: none;" onclick="novaFase()">Proxima Fase</button>
     <div id="segFase" style="display: none;">
         <p>Teste</p>
