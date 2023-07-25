@@ -60,3 +60,7 @@ function limpar() {
     
 }
 
+function novaFase() {
+    document.getElementById("segFase").style.display="flex"
+}
+
