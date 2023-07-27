@@ -44,9 +44,13 @@ function jogar() {
                 if (pontPer > pontMon) {
                     qtdM == qtdM - 1
                     a.innerHTML += "Você venceu a luta!"
+                    document.getElementById("jogar").style.display="none"
+                    document.getElementById("tntn").style.display="none"
                     document.getElementById("segfase").style.display="flex"
+                    
                 } else {
                     a.innerHTML += "Você perdeu a luta, tente novamente!"
+                  
                         
                 }
             } while (qtdM == 0)
@@ -69,13 +73,11 @@ mDs.velo = 68 ;
 mDs.inte = 74 ;
 
 function novaFase() {
-    document.getElementById("tntn").style.display="none"
-    document.getElementById("jogar").style.display="none"
     let s = document.getElementById("segFase")
     s.style.display="block"
     let pontMon = 0
     let pontPer = 0
-    s.innerHTML = `<h2>${nome.value} x ${mDs.nome} </h2>`
+    s.innerHTML = `<h4>${nome.value} x ${mDs.nome} </h4>`
     if (mDs.forca < f.value) {
         s.innerHTML += `<p> Voce é mais forte que o Monstro!</p>`
         pontPer = pontPer + 1
@@ -97,14 +99,19 @@ function novaFase() {
                 s.innerHTML += `<p> O monstro é mais inteligente que você :( </p>`
                 pontMon = pontMon + 1
             } 
-            do {
+            do 
                 if (pontPer > pontMon) {
                     qtdM == qtdM - 1
+                    document.getElementById("botoes").style.display="none"
+                    document.getElementById("Persona").style.display="none"
+                    document.getElementById("Arena").style.display="none"
                     s.innerHTML += "Você venceu a luta!"
-                    document.getElementById("segfase").style.display="flex"
                     
                 } else {
-                    a.innerHTML += "Você perdeu a luta, tente novamente!"      
+                    document.getElementById("tntn").style.display="block"   
+                    document.getElementById("segfase").innerText='Lutar'
+                    s.innerHTML += "Você perdeu a luta, tente novamente!"   
+                    
                 }
             } while (qtdM == 0)
             
