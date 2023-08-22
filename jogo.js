@@ -19,6 +19,7 @@ function jogar() {
     let pontMon = 0
     let pontPer = 0
     a.innerHTML = `${nome.value} x ` + mUm.nome
+    
     if (mUm.forca < f.value) {
         a.innerHTML += `<p> Voce é mais forte que o Monstro!</p>`
         pontPer = pontPer + 1
@@ -99,7 +100,7 @@ function novaFase() {
                 s.innerHTML += `<p> O monstro é mais inteligente que você :( </p>`
                 pontMon = pontMon + 1
             } 
-            do 
+            do {
                 if (pontPer > pontMon) {
                     qtdM == qtdM - 1
                     document.getElementById("botoes").style.display="none"
@@ -114,6 +115,7 @@ function novaFase() {
                     
                 }
             } while (qtdM == 0)
-            
-}
+        }
+              
+
 
